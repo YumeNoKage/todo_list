@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    /* font */
+    --font-family-poppins : 'Poppins', sans-serif;
+
+    /* colors */
+    
+    --custome-red: #ED4C5C;
+    --custome-yellow: #F8A541;
+    --custome-green: #00A790;
+    --custome-blue-shoft: #16ABF8;
+    --custome-blue-strong: #428BC1;
+    --custome-purple: #8942C1;
+    --custome-gray-strong: #4A4A4A;
+    --custome-gray-medium: #888888;
+    --custome-gray-shoft: #F4F4F4;
+    --custome-black: #111111;
+
+}
+
+*{
+    font-family: var(--font-family-poppins);
+    transition: all 200ms ease-in-out;
+}
+
+/* Background Color */
+.bg-custome-blue-shoft {
+    background-color: var(--custome-blue-shoft);
+}
+.btn:hover.bg-custome-blue-shoft {
+    background-color: var(--custome-blue-strong);
+}
+
+/* Text Color */
+
+
+/* Fonts Weight */
+.fw-custome-700 { font-weight: 700; }
+.fw-custome-600 { font-weight: 600; }
+.fw-custome-500 { font-weight: 500; }
+.fw-custome-400 { font-weight: 400; }
+
+/* Fonts Size */
+.font-custome-36 { font-size: 36px; }
+.font-custome-16 { font-size: 16px; }
+.font-custome-18 { font-size: 18px; }
+.font-custome-14 { font-size: 14px; }
+.font-custome-12 { font-size: 12px; }
