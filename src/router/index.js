@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashoard from '../views/Dasboard.vue'
+import Detail from '../views/Detail.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Dasboard',
     component: Dashoard
+  },
+  {
+    path: '/detail/:id',
+    name: 'Detail',
+    component: Detail
   },
   // {
   //   path: '/about',

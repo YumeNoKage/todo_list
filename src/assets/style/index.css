@@ -16,7 +16,6 @@
     --custome-gray-medium: #888888;
     --custome-gray-shoft: #F4F4F4;
     --custome-black: #111111;
-
 }
 
 *{
@@ -24,16 +23,66 @@
     transition: all 200ms ease-in-out;
 }
 
-/* Background Color */
-.bg-custome-blue-shoft {
-    background-color: var(--custome-blue-shoft);
+/* GLOBAL SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    border-radius: 1rem;
 }
-.btn:hover.bg-custome-blue-shoft {
-    background-color: var(--custome-blue-strong);
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: white !important ;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--custome-gray-medium) !important ;
+    border-radius: 1rem;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--custome-gray-medium) !important ;
+    filter: brightness(0.85)
+}
+
+/* Background Color & event hover btn*/
+.bg-custome-blue-shoft { background-color: var(--custome-blue-shoft); }
+.btn:hover.bg-custome-blue-shoft { background-color: var(--custome-blue-strong); }
+.btn:disabled.bg-custome-blue-shoft { 
+    background-color: var(--custome-blue-shoft); 
+    opacity: 0.2;
+}
+
+.bg-custome-red { background-color: var(--custome-red); }
+.btn:hover.bg-custome-red { 
+    background-color: var(--custome-red);
+    filter: brightness(0.85);
+}
+
+.bg-custome-gray-shoft { background-color: var(--custome-gray-shoft); }
+.btn:hover.bg-custome-gray-shoft { 
+    background-color: var(--custome-gray-medium);
+}
+
+.bg-custome-gray-shoft { background-color: var(--custome-gray-shoft); }
+.btn:hover.bg-custome-gray-shoft { 
+    background-color: var(--custome-gray-medium);
 }
 
 /* Text Color */
-
+.text-custome-red{color: var(--custome-red); }
+.text-custome-yellow{color: var(--custome-yellow); }
+.text-custome-green{color: var(--custome-green); }
+.text-custome-blue-shoft{ color: var(--custome-blue-shoft); }
+.text-custome-blue-strong{color: var(--custome-blue-strong); }
+.text-custome-purple{color: var(--custome-purple); }
+.text-custome-gray-strong{color: var(--custome-gray-strong); }
+.text-custome-gray-medium{color: var(--custome-gray-medium); }
+.text-custome-gray-shoft{color: var(--custome-gray-shoft); }
+.text-custome-black{color: var(--custome-black); }
 
 /* Fonts Weight */
 .fw-custome-700 { font-weight: 700; }
@@ -47,3 +96,9 @@
 .font-custome-18 { font-size: 18px; }
 .font-custome-14 { font-size: 14px; }
 .font-custome-12 { font-size: 12px; }
+
+/* Border Radius */
+.rounded-12 { border-radius: 12px; }
+
+/* box-shadow */
+.custome-box-shadow{ box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1)}
