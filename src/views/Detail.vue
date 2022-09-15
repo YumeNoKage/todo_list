@@ -40,76 +40,78 @@
                             </button>
                         </span>
                     </h1>
-
-                    <div class="dropdown">
-                        <div class="d-flex position-relative col-lg-6 col-md-8 col-sm-8 input-dropdown" data-bs-toggle="dropdown" aria-expanded="false" data-cy="modal-add-priority-dropdown">
-                            <span class="border rounded-circle">
-                                <img class="p-3" src="../assets/icons/arrows-sort.svg" alt="sort">
-                            </span>
+                    
+                    <div class="d-flex">
+                        <div class="dropdown me-4">
+                            <div class="d-flex position-relative col-lg-6 col-md-8 col-sm-8 input-dropdown" data-bs-toggle="dropdown" aria-expanded="false" data-cy="modal-add-priority-dropdown">
+                                <span class="border rounded-circle">
+                                    <img class="p-3" src="../assets/icons/arrows-sort.svg" alt="sort">
+                                </span>
+                            </div>
+                            <ul class="dropdown-menu py-0 rounded-12" style="min-width: 205px">
+                                <li>
+                                    <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom border-top-12`" @click="filter= 'latest'" data-cy="sort-latest">
+                                        <div class="d-flex align-items-center">
+                                            <span><img src="../assets/icons/arrow-sort-desc.svg" alt="sort desc"></span>
+                                            <span class="ms-3">Terbaru</span>
+                                        </div>
+                                        <div v-if="filter == 'latest'">
+                                            <img src="../assets/icons/check.svg" alt="checked">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom`" @click="filter= 'oldest'" data-cy="sort-oldest">
+                                        <div class="d-flex align-items-center">
+                                            <span><img src="../assets/icons/arrow-sort-asc.svg" alt="sort asc"></span>
+                                            <span class="ms-3">Terlama</span>
+                                        </div>
+                                        <div v-if="filter == 'oldest'">
+                                            <img src="../assets/icons/check.svg" alt="checked">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom`" @click="filter= 'az'" data-cy="sort-az">
+                                        <div class="d-flex align-items-center">
+                                            <span><img src="../assets/icons/arrow-sort-az.svg" alt="sort az"></span>
+                                            <span class="ms-3">A-Z</span>
+                                        </div>
+                                        <div v-if="filter == 'az'">
+                                            <img src="../assets/icons/check.svg" alt="checked">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom`" @click="filter= 'za'" data-cy="sort-za">
+                                        <div class="d-flex align-items-center">
+                                            <span><img src="../assets/icons/arrow-sort-za.svg" alt="sort za"></span>
+                                            <span class="ms-3">Z-A</span>
+                                        </div>
+                                        <div v-if="filter == 'za'">
+                                            <img src="../assets/icons/check.svg" alt="checked">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom-12`" @click="filter= 'unfinished'" data-cy="sort-unfinished">
+                                        <div class="d-flex align-items-center">
+                                            <span><img src="../assets/icons/arrows-sort-unfinished.svg" alt="sort unfinished"></span>
+                                            <span class="ms-3">Belum Selesai</span>
+                                        </div>
+                                        <div v-if="filter == 'unfinished'">
+                                            <img src="../assets/icons/check.svg" alt="checked">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="dropdown-menu py-0 rounded-12" style="min-width: 205px">
-                            <li>
-                                <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom border-top-12`" @click="filter= 'latest'" data-cy="sort-latest">
-                                    <div class="d-flex align-items-center">
-                                        <span><img src="../assets/icons/arrow-sort-desc.svg" alt="sort desc"></span>
-                                        <span class="ms-3">Terbaru</span>
-                                    </div>
-                                    <div v-if="filter == 'latest'">
-                                        <img src="../assets/icons/check.svg" alt="checked">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom`" @click="filter= 'oldest'" data-cy="sort-oldest">
-                                    <div class="d-flex align-items-center">
-                                        <span><img src="../assets/icons/arrow-sort-asc.svg" alt="sort asc"></span>
-                                        <span class="ms-3">Terlama</span>
-                                    </div>
-                                    <div v-if="filter == 'oldest'">
-                                        <img src="../assets/icons/check.svg" alt="checked">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom`" @click="filter= 'az'" data-cy="sort-az">
-                                    <div class="d-flex align-items-center">
-                                        <span><img src="../assets/icons/arrow-sort-az.svg" alt="sort az"></span>
-                                        <span class="ms-3">A-Z</span>
-                                    </div>
-                                    <div v-if="filter == 'az'">
-                                        <img src="../assets/icons/check.svg" alt="checked">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom`" @click="filter= 'za'" data-cy="sort-za">
-                                    <div class="d-flex align-items-center">
-                                        <span><img src="../assets/icons/arrow-sort-za.svg" alt="sort za"></span>
-                                        <span class="ms-3">Z-A</span>
-                                    </div>
-                                    <div v-if="filter == 'za'">
-                                        <img src="../assets/icons/check.svg" alt="checked">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div :class="`dropdown-item d-flex align-items-center justify-content-between py-3 border-bottom border-bottom-12`" @click="filter= 'unfinished'" data-cy="sort-unfinished">
-                                    <div class="d-flex align-items-center">
-                                        <span><img src="../assets/icons/arrows-sort-unfinished.svg" alt="sort unfinished"></span>
-                                        <span class="ms-3">Belum Selesai</span>
-                                    </div>
-                                    <div v-if="filter == 'unfinished'">
-                                        <img src="../assets/icons/check.svg" alt="checked">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <button class="btn bg-custome-blue-shoft rounded-pill px-3 text-white font-custome-18 fw-custome-600" data-bs-target="#addTodo" data-bs-toggle="modal" id="modalAddTodo" data-cy="todo-add-button">
-                        <img src="../assets/icons/plus.svg" alt="add" width="24">
-                        <span class="ms-2">Tambah</span>
-                    </button>
+                        <button class="btn bg-custome-blue-shoft rounded-pill px-3 text-white font-custome-18 fw-custome-600" data-bs-target="#addTodo" data-bs-toggle="modal" id="modalAddTodo" data-cy="todo-add-button">
+                            <img src="../assets/icons/plus.svg" alt="add" width="24">
+                            <span class="ms-2">Tambah</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
