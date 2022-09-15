@@ -67,10 +67,22 @@
     background-color: var(--custome-gray-medium);
 }
 
-.bg-custome-gray-shoft { background-color: var(--custome-gray-shoft); }
-.btn:hover.bg-custome-gray-shoft { 
+.bg-custome-gray-medium { background-color: var(--custome-gray-medium); }
+.btn:hover.bg-custome-gray-medium { 
     background-color: var(--custome-gray-medium);
 }
+
+.bg-custome-gray-strong { background-color: var(--custome-gray-strong); }
+.btn:hover.bg-custome-gray-strong { 
+    background-color: var(--custome-gray-strong);
+    filter: brightness(0.85);
+}
+
+.bg-custome-purpel { background-color: var(--custome-purple); }
+.bg-custome-blue-strong { background-color: var(--custome-blue-strong); }
+.bg-custome-blue-shoft { background-color: var(--custome-blue-shoft); }
+.bg-custome-green { background-color: var(--custome-green); }
+.bg-custome-yellow { background-color: var(--custome-yellow); }
 
 /* Text Color */
 .text-custome-red{color: var(--custome-red); }
@@ -100,5 +112,8 @@
 /* Border Radius */
 .rounded-12 { border-radius: 12px; }
 
-/* box-shadow */
+/* Box-shadow */
 .custome-box-shadow{ box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1)}
+
+/* Cursor Style */
+.cursor-pointed { cursor:pointer; }

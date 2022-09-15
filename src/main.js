@@ -21,8 +21,8 @@ import globalFunction from './services/globalFunction'
 
 
 axios.defaults.baseURL = 'https://todo.api.devcode.gethired.id'
-axios.defaults.params = {}
-axios.defaults.params['email'] = 'ericopratama2003@gmail.com'
+// axios.defaults.params = {}
+// axios.defaults.params['email'] = 'ericopratama2003@gmail.com'
 
 window.jQuery = window.$ = jQuery
 const app = createApp(App)

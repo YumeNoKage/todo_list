@@ -73,7 +73,7 @@
 
     export default {
         props:{
-            showLoading: {default: false}
+            showLoading: {default: false},
         },
         data(){
             return{

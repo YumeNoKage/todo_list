@@ -13,7 +13,7 @@
             </div>
             <!-- list activity -->
             <div class="col-12">
-                <Detail :showLoading="isLoading" ref="ListTodo"/>
+                <List :showLoading="isLoading" ref="ListActivity"/>
             </div>
         </div>
     </div>
@@ -21,10 +21,10 @@
 
 <script>
     import { mapActions } from 'vuex';
-    import Detail from "../components/todo_list/Detail.vue"
+    import List from "../components/dashboard/List.vue"
 
     export default {
-        components:{Detail},
+        components:{List},
         data(){
             return{
                 isLoading: false,
@@ -41,10 +41,10 @@
 
                 let data = {url, params}
                 const response = await this.postData(data)
-                this.$refs.ListActivity.deleteAction = false
-
-                if (response.status == 201) {
+                
+                if (response.status == 201 && this.$refs.ListActivity) {
                     // child modal
+                    this.$refs.ListActivity.deleteAction = false
                     $('#deleteActivityNotif').modal('show')
                     this.$refs.ListActivity.getActivity('activity-groups')
                     setTimeout( ()=>{$('#deleteActivityNotif').modal('hide')}, 2000)
